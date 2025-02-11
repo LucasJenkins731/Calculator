@@ -33,7 +33,14 @@ public class calculator{
                 break;
             //Division
             case "/":
-                results = a / b;
+                //If b is 0, end program 
+                if (b == 0){
+                    System.out.println("Error: Divide by Zero");
+                    return;
+                }
+                else {
+                    results = a / b;
+                }
                 break;
             default:
                 //If wrong input, end program
