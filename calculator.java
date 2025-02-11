@@ -14,16 +14,26 @@ public class calculator{
         a = scanner.nextInt();
         System.out.println("Please enter your second number: ");
         b = scanner.nextInt();
-        System.out.println("Would you like to do addition or subtraction? (+/-)");
+        System.out.println("What arithmetic would you like to do? \n+: Addition \n-: Subtraction\n*: Multiplication\n/: Division");
         arithmetic = scanner.next();
 
         //Does equation for whatever arithmetic is entered
         switch (arithmetic){
+            //Addition
             case "+":
                 results = a + b;
                 break;
+            //Subtraction
             case "-":
                 results = a - b;
+                break;
+            //Multiplication
+            case "*":
+                results = a * b;
+                break;
+            //Division
+            case "/":
+                results = a / b;
                 break;
             default:
                 //If wrong input, end program
