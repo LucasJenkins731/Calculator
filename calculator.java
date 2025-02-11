@@ -1,18 +1,36 @@
+//Lucas Jenkins
 import java.util.*;
 
 public class calculator{
     public static int a;
     public static int b;
     public static int results;
+    public static String arithmetic;
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
+
         //Ask for user input
-        System.out.printf("Please enter your first number: ");
+        System.out.println("Please enter your first number: ");
         a = scanner.nextInt();
-        System.out.printf("Please enter your second number: ");
+        System.out.println("Please enter your second number: ");
         b = scanner.nextInt();
-        results = a + b;
-        //Shows addition
-        System.out.printf("%d + %d = %d", a, b, results);
+        System.out.println("Would you like to do addition or subtraction? (+/-)");
+        arithmetic = scanner.next();
+
+        //Does equation for whatever arithmetic is entered
+        switch (arithmetic){
+            case "+":
+                results = a + b;
+                break;
+            case "-":
+                results = a - b;
+                break;
+            default:
+                //If wrong input, end program
+                System.out.println("Incorrect input");
+                return;
+        }
+        //Shows equation and results
+        System.out.printf("%d %s %d = %d", a, arithmetic, b, results);
     }
 }
